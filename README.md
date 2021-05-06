@@ -1,5 +1,5 @@
-# TF-TRT/Pytorch-TRT tutorial
-<p>This tutorial describes steps how to convert your tensorflow saved model to TensorRT engine and how to run it on video.</p>
+# TF-TRT tutorial
+<p>This tutorial describes the steps to convert your tensorflow saved model to TensorRT engine and how to run it on video. The instructions are applicable for running the TRT engine on any Nvidia Jetson device with Jetpack installed. Also you can folow this tutorial to inference the TRT engine right on your PC with Nvidia Gpu, but you need to set up cuda,cudnn,tensorrt libraries for this. </p>
 
 ## There steps are:
 * Convert saved model to ONNX using tf2onnx python library
