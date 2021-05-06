@@ -1,1 +1,0 @@
-# TF-TRT-Pytorch-TRT-tutorial
