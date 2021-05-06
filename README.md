@@ -10,6 +10,7 @@
 
 ### Convert saved model to ONNX using tf2onnx python library (skip if you have Pytorch model):
 <p> Install tf2onnx:  </p>
+
 ```console
 pavlo@pc:~$ pip3 install tf2onnx
 ```
