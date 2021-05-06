@@ -6,7 +6,7 @@
 * Simplify ONNX model using onnxsimplifier python library
 * Copy siplified ONNX model from your PC to Jetson
 * Create TensorRT engine from ONNX model on the Jetson using trtexec
-* Adjust given script for inferencing(change the model shape, output names, adjust input preprocesing and output processing), and run the script
+* Adjust given script for inferencing(change the model shape, input names, adjust input preprocesing and output processing), and run the script
 
 ### Convert saved model to ONNX using tf2onnx python library (skip if you have Pytorch model):
 <p> Install tf2onnx:  </p>
