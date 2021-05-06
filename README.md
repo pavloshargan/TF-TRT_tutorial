@@ -1,5 +1,5 @@
 # TF-TRT/Pytorch-TRT tutorial
-<p>This tutorial describes steps how to convert your tensorflow saved model to TensorRT engine and how to run it on video. You can also folow the same steps if you have Pytorch model, the difference is only in the first step (converting to ONNX)</p>
+<p>This tutorial describes steps how to convert your tensorflow saved model to TensorRT engine and how to run it on video.</p>
 
 ## There steps are:
 * Convert saved model to ONNX
@@ -8,7 +8,7 @@
 * Create TensorRT engine from ONNX model on the Jetson using trtexec
 * Adjust given script for inferencing(change the model shape, input names, adjust input preprocesing and output processing), and run the script
 
-### Convert saved model to ONNX using tf2onnx python library (skip if you have Pytorch model):
+### Convert saved model to ONNX using tf2onnx python library:
 <p> Install tf2onnx:  </p>
 
 ```console
@@ -19,26 +19,6 @@ pavlo@pc:~$ pip3 install tf2onnx
 
 ```
 pavlo@pc:~$ python3 -m tf2onnx.convert --saved-model "my_tf_saved_model" --output "my_model.onnx" --opset 11
-```
-
-### If you have Pytorch model, convert it to onnx using folowing example:
-```
-import torch
-import torch.onnx
-
-# A model class instance (class not shown)
-model = MyModelClass()
-
-# Load the weights from a file (.pth usually)
-state_dict = torch.load(weights_path)
-
-# Load the weights now into a model net architecture defined by our class
-model.load_state_dict(state_dict)
-
-# Create the right input shape (e.g. for an image)
-dummy_input = torch.randn(sample_batch_size, channel, height, width)
-
-torch.onnx.export(model, dummy_input, "my_model.onnx")
 ```
 
 ### Simplify ONNX model using onnxsimplifier python library:
