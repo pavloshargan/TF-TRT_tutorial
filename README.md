@@ -2,7 +2,7 @@
 <p>This tutorial describes steps how to convert your tensorflow saved model to TensorRT engine and how to run it on video.</p>
 
 ## There steps are:
-* Convert saved model to ONNX
+* Convert saved model to ONNX using tf2onnx python library
 * Simplify ONNX model using onnxsimplifier python library
 * Copy siplified ONNX model from your PC to Jetson
 * Create TensorRT engine from ONNX model on the Jetson using trtexec
